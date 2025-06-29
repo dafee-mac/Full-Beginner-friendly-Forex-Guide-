@@ -1,0 +1,78 @@
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { useState } from "react";
+import { CheckCircle } from "lucide-react";
+
+export default function ForexLandingPage() {
+  const [email, setEmail] = useState("");
+
+  return (
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+      <Card className="w-full max-w-md">
+        <CardContent className="p-6 space-y-6">
+          <div className="text-center space-y-2">
+            <CheckCircle className="w-12 h-12 mx-auto text-green-500" />
+            <h1 className="text-2xl font-bold text-gray-800">
+              Start Your Forex Trading Journey
+            </h1>
+            <p className="text-gray-600">
+              Discover how to make money online by trading global currencies.
+              Download our free Forex Quickstart Guide and learn:
+            </p>
+          </div>
+
+          <ul className="space-y-2 text-gray-700">
+            <li>✓ How forex trading works</li>
+            <li>✓ Avoid common beginner mistakes</li>
+            <li>✓ Why you must choose a trusted broker</li>
+            <li>✓ How to start with just $10</li>
+          </ul>
+
+          <div className="space-y-2">
+            <label className="block text-sm font-medium text-gray-600">
+              Enter your email to get the guide:
+            </label>
+            <Input
+              placeholder="you@example.com"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white text-lg mt-2">
+              📥 Download Guide
+            </Button>
+          </div>
+
+          <div className="text-center pt-4 border-t text-sm text-gray-600">
+            <p className="font-bold text-lg mb-3 text-blue-600">
+              Ready to Start Trading Today?
+            </p>
+            <p className="mb-3">
+              Join <strong>Exness</strong> - one of the world's most trusted forex brokers, 
+              and get access to:
+            </p>
+            <ul className="text-left mb-4 space-y-1">
+              <li>• Instant account approval</li>
+              <li>• Tight spreads from 0.0 pips</li>
+              <li>• $10 minimum deposit</li>
+              <li>• 24/7 customer support</li>
+            </ul>
+            <a
+              href="https://one.exnesstrack.org/a/c_3vpu5eo65l"
+              className="inline-block w-full py-3 px-4 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              🚀 Start Trading Now - Get Free Bonus
+            </a>
+            <p className="mt-2 text-xs text-gray-500">
+              Limited time offer - New accounts only
+            </p>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  );
+}
